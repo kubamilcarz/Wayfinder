@@ -31,14 +31,30 @@ extension View {
             }
     }
     
+}
+
+@available(iOS 18.0, *)
+extension View {
+    
     // MARK: Genie Transition
-    @available(iOS 18.0, *)
-    public func geniePush(id: String, namespace: Namespace.ID) -> some View {
+    
+    /// Applies a genie push transition to the view.
+    ///
+    /// - Parameters:
+    ///   - id: A unique identifier for the transition.
+    ///   - namespace: The namespace used for the matched geometry effect.
+    /// - Returns: A view modified with the `GeniePushViewModifier`.
+    func geniePush(id: String, namespace: Namespace.ID) -> some View {
         self.modifier(GeniePushViewModifier(id: id))
     }
-    
-    @available(iOS 18.0, *)
-    public func asGeniePushTarget(id: String, namespace: Namespace.ID) -> some View {
+
+    /// Marks the view as a target for a genie push transition.
+    ///
+    /// - Parameters:
+    ///   - id: A unique identifier for the transition.
+    ///   - namespace: The namespace used for the matched geometry effect.
+    /// - Returns: A view modified with the `GeniePushTargetViewModifier`.
+    func asGeniePushTarget(id: String, namespace: Namespace.ID) -> some View {
         self.modifier(GeniePushTargetViewModifier(id: id))
     }
 }

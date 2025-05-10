@@ -7,6 +7,16 @@
 
 import SwiftUI
 
+/// A view modifier that applies a "genie push" transition effect to a source view.
+///
+/// This modifier uses a `matchedGeometryEffect` to create a seamless transition
+/// between the source and target views. It is available on iOS 18 and later.
+///
+/// - Note: Ensure that the `id` matches between the source and target views to enable the transition.
+///
+/// - Parameters:
+///   - namespace: A `Namespace` used to link the source and target views.
+///   - id: A unique identifier for the transition effect.
 @available(iOS 18.0, *)
 struct GeniePushViewModifier: ViewModifier {
     @Namespace var namespace
@@ -18,6 +28,16 @@ struct GeniePushViewModifier: ViewModifier {
     }
 }
 
+/// A view modifier that applies a "genie push" transition effect to a target view.
+///
+/// This modifier uses the `navigationTransition` API with a `.zoom` animation
+/// to create a smooth transition from the source view. It is available on iOS 18 and later.
+///
+/// - Note: Ensure that the `id` matches between the source and target views to enable the transition.
+///
+/// - Parameters:
+///   - namespace: A `Namespace` used to link the source and target views.
+///   - id: A unique identifier for the transition effect.
 @available(iOS 18.0, *)
 struct GeniePushTargetViewModifier: ViewModifier {
     @Namespace var namespace
