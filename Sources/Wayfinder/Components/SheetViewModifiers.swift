@@ -34,7 +34,7 @@ extension View {
 }
 
 @available(iOS 18.0, *)
-extension View {
+public extension View {
     
     // MARK: Genie Transition
     
