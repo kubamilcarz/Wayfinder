@@ -29,34 +29,34 @@ import Wayfinder
 
 struct ContentView: View {
 
- @Environment(\.router) var router
- 
- var body: some View {
-     NavigationView {
-         VStack {
-             Button {
-                router.showScreen(.push) { _ in
-                    DetailView()
+    @Environment(\.router) var router
+
+    var body: some View {
+        NavigationView {
+            VStack {
+                Button {
+                    router.showScreen(.push) { _ in
+                        DetailView()
+                    }
+                } label: {
+                    Text("Go to Detail")
                 }
-             } label: {
-                 Text("Go to Detail")
-             }
-         }
-         .navigationTitle("Home")
-     }
- }
+            }
+            .navigationTitle("Home")
+        }
+    }
 }
 
 struct DetailView: View {
 
- @Environment(\.router) var router
- 
- var body: some View {
-    Button("Dismiss Screen") {
-        router.dismissScreen()
+    @Environment(\.router) var router
+
+    var body: some View {
+        Button("Dismiss Screen") {
+            router.dismissScreen()
+        }
+        .navigationTitle("Detail")
     }
-    .navigationTitle("Detail")
- }
 }
 ```
 
