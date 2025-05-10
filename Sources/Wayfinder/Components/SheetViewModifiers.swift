@@ -33,12 +33,12 @@ extension View {
     
     // MARK: Genie Transition
     @available(iOS 18.0, *)
-    func geniePush(id: String, namespace: Namespace.ID) -> some View {
+    public func geniePush(id: String, namespace: Namespace.ID) -> some View {
         self.modifier(GeniePushViewModifier(id: id))
     }
     
     @available(iOS 18.0, *)
-    func asGeniePushTarget(id: String, namespace: Namespace.ID) -> some View {
+    public func asGeniePushTarget(id: String, namespace: Namespace.ID) -> some View {
         self.modifier(GeniePushTargetViewModifier(id: id))
     }
 }
