@@ -37,7 +37,7 @@ extension View {
             case .clear:
                 self
                     .background(RemoveSheetShadow())
-            case .custom(let value):
+            case .custom(_):
                 self
             }
         }

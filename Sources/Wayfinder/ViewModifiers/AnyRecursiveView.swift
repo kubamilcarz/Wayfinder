@@ -139,6 +139,7 @@ public protocol IntegerIdentifiable: Identifiable where ID == Int {
     init(id: Int)
 }
 
+extension Int: @retroactive Identifiable {}
 extension Int: IntegerIdentifiable {
     public var id: Int {
         self
@@ -162,6 +163,7 @@ public protocol BoolIdentifiable: Identifiable where ID == Bool {
     init(id: Bool)
 }
 
+extension Bool: @retroactive Identifiable {}
 extension Bool: BoolIdentifiable {
     public var id: Bool {
         self
