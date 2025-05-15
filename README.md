@@ -3,6 +3,8 @@
 **Wayfinder** is a Swift package designed to simplify navigation in SwiftUI applications.  
 It offers a declarative and type-safe approach to routing, making it easier to manage navigation flows in your app.
 
+NOTE: Fork of SwiftfulRouting (https://github.com/SwiftfulThinking/SwiftfulRouting)
+
 ## Features
 
 - Declarative routing for SwiftUI
